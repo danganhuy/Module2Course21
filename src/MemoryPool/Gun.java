@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Gun {
-    private int bulletCount=1000;
+    private int bulletCount = 1000;
 
     public void fireInPool() {
         BulletPool pool = new BulletPool();
@@ -16,13 +16,11 @@ public class Gun {
             for(int j=0; j < plist.size(); j++) {
                 Bullet pp = plist.get(j);
                 pp.move();
-                System.out.print("-" + pp.getPosition());
                 if(pp.getPosition() == 10) {
                     pool.freeItem(pp);
                     plist.remove(pp);
                 }
             }
-            System.out.println();
         }
     }
 
@@ -35,12 +33,10 @@ public class Gun {
             for(int j=0; j < plist.size(); j++) {
                 Bullet pp=plist.get(j);
                 pp.move();
-                System.out.print("-" + pp.getPosition());
                 if(pp.getPosition() == 10) {
                     plist.remove(pp);
                 }
             }
-            System.out.println();
         }
     }
 }

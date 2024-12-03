@@ -16,6 +16,10 @@ public class Bullet {
         count++;
     }
 
+    public static void resetCount() {
+        count = 0;
+    }
+
     public void move() {
         position++;
     }
